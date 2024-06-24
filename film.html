@@ -9,19 +9,17 @@
     <script src="film.js" defer></script>
   </head>
 
-  <body>
-    <div>
-      <h1>Star Wars Universe Films</h1>
-      <label for="searchString"
-        >What movie are you looking for?
-        <span class="small">(Regular expressions are cool here)</span></label
-      >
-      <input
-        id="searchString"
-        oninput="filterCharacters()"
-        autocomplete="off"
-      />
-    </div>
-    <section id="charactersList"></section>
-  </body>
+<body>
+  <main>
+    <h1 id="name"></h1>
+    <section id="generalInfo">
+      <p>Producer <span id="producer"></span></p>
+      <p>Title: <span id="title"></span></p>
+      <p>Episode ID: <span id="episode_id"></span></p>
+      <p>Director: <span id="director"></span></p>
+      <p>Release Date: <span id="release_date"></span></p>
+      <p>Opening Crawl: <span id="opening_crawl"></span></p>
+    </section>
+  </main>
+</body>
 </html>
