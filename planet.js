@@ -12,6 +12,18 @@ async function getPlanets(){
       console.log('Error fetching API: ',err);
     }); 
   console.log(res);
+  fillFields(res);
+}
+
+function fillFields(res){
+  document.getElementById('climate').textContent = res['climate'];
+  document.getElementById('surface_water').textContent = res['surface_water'];
+  document.getElementById('name').textContent = res['name'];
+  document.getElementById('diameter').textContent = res['diameter'];
+  document.getElementById('rotation_period').textContent = res['rotation_period'];
+  document.getElementById('gravity').textContent = res['gravity'];
+  document.getElementById('orbital_period').textContent = res['orbital_period'];
+  document.getElementById('population').textContent = res['population'];
 }
 
 async function getCharacters() {
@@ -39,7 +51,8 @@ const renderCharacters = characters => {
     charactersList.replaceChildren(...divs)
   }
 
-const goToCharacterPage = id => window.location = `/character.html?id=${id}`
+const goToCharacterPage = id => window.location = `/character?id=${id}`
 
+// 4bd794c593689c941b92196e4b7ff19a1410fa89
 getPlanets();
 getCharacters();
