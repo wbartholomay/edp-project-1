@@ -48,7 +48,7 @@ async function getPlanets() {
     planet.error("Error reading characters.", ex.message);
   }
   console.log("All the characters are ", planet);
-  renderCharacters(planet);
+  renderPlanets(planet);
 }
 
 const renderCharacters = (characters) => {
