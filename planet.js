@@ -40,7 +40,7 @@ async function getFilms() {
       console.error("Error reading films.", ex.message);
     }
     console.log("All the films are ", films)
-    renderFilms(films);
+    renderFilms(films.slice(0,6));
   }
 
 async function getCharacters() {
