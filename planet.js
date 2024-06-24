@@ -19,6 +19,7 @@ function fillFields(res){
   document.getElementById('climate').textContent = res['climate'];
   document.getElementById('surface_water').textContent = res['surface_water'];
   document.getElementById('name2').textContent = res['name'];
+  document.getElementById('name').textContent = res['name'];
   document.getElementById('diameter').textContent = res['diameter'];
   document.getElementById('rotation_period').textContent = res['rotation_period'];
   document.getElementById('gravity').textContent = res['gravity'];
