@@ -51,7 +51,7 @@ const renderCharacters = characters => {
     charactersList.replaceChildren(...divs)
   }
 
-const goToCharacterPage = id => window.location = `/character.html?id=${id}`
+const goToCharacterPage = id => window.location = `/character?id=${id}`
 
 // 4bd794c593689c941b92196e4b7ff19a1410fa89
 getPlanets();
