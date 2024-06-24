@@ -7,12 +7,11 @@ const charactersList = document.querySelector("#charactersList")
 
 async function getPlanets(){
   const res = await fetch(`https://swapi2.azurewebsites.net/api/planets/${id}`)
-    .then(data => res.json())
-    .then(console.log(data))
+    .then(res => res.json())
     .catch(err => {
       console.log('Error fetching API: ',err);
     }); 
-  console.log(data);
+  console.log(res);
 }
 
 async function getCharacters() {
