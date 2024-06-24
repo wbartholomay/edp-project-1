@@ -1,18 +1,14 @@
-const baseUrl = `https://swapi2.azurewebsites.net/api`;
-const filmList = document.querySelector("#filmList");
-addEventListener("DOMContentLoaded", () => {
-  filmsUl = document.querySelector("#films>ul");
-  const sp = new URLSearchParams(window.location.search);
-  const id = sp.get("id");
-  getFilm(id);
-});
-async function getFilm(id) {
-  let film;
-  try {
-    film = await fetchFilms(id);
-    character.films = await fetchFilms(character);
-  } catch (ex) {
-    console.error(`Error reading film ${id} data.`, ex.message);
-  }
-  renderFilm(film);
+const FilmsList = document.getElementById("filmsList");
+const sp = new URLSearchParams(window.location.search);
+const id = sp.get("id");
+
+async function getFilms() {
+  const res = await fetch(`https://swapi2.azurewebsites.net/api/films/${id}`)
+    .then((res) => res.json())
+    .catch((err) => {
+      console.log("Error fetching API: ", err);
+    });
+  console.log(res);
 }
+
+getFilms();
