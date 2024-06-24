@@ -5,20 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planet Info</title>
-  <link rel="stylesheet" href="site.css">
-  <script src="planet.js" defer></script>
+  <script src="character.js" defer></script>
+  <link rel="stylesheet" href="site.css" />
+  <title>A Star Wars Character</title>
 </head>
 
 <body>
-  <div>
-    <h1>Planets</h1>
-    <label for="searchString">What planet you looking for? <span class="small">(Regular expressions are cool
-        here)</span></label>
-    <input id="searchString" oninput="filterCharacters()" autocomplete="off" />
-  </div>
-  <section id="planetsList">
-  </section>
+  <main>
+    <h1 id="name"></h1>
+    <section id="generalInfo">
+      <p>Climate <span id="climate"></span></p>
+      <p>Has Surface Water: <span id="surface_water"></span></p>
+      <p>Name: <span id="name"></span></p>
+      <p>Diameter: <span id="diameter"></span> km</p>
+      <p>Rotation Period: <span id="rotation_period"></span> hours</p>
+      <p>Gravity: <span id="gravity"></span></p>
+      <p>Orbital Period: <span id="orbital_period"></span> days</p>
+      <p>Population: <span id="population"></span></p>
+    </section>
+    <section id="planets">
+      <h2>Homeworld</h2>
+      <p><span id="homeworld"></span></p>
+    </section>
+    <section id="films">
+      <h2>Films appeared in</h2>
+      <ul></ul>
+    </section>
+    </section>
+  </main>
 </body>
 
 </html>
